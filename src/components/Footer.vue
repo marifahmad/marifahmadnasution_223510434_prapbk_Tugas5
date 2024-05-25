@@ -21,7 +21,7 @@ import AboutView from '../pages/AboutView.vue'
       <div class="footer-section">
         <h4>Contact Us</h4>
         <p>Email: marifahmad145@gmail.com</p>
-        <p>Phone: +123 456 7890</p>
+        <p>Phone: +62 4565 7890</p>
       </div>
     </div>
     <div class="footer-bottom">
