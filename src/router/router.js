@@ -5,6 +5,7 @@ import AboutView from '../pages/AboutView.vue'
 import BlogView from '../pages/BlogView.vue'
 import ShopView from '../pages/ShopView.vue'
 import Produk from '../views/Produk.vue';
+import Tugas from '../views/TugasView.vue'
 
 const routes = [
   { path: '/', name: 'home', component: HomeView },
@@ -12,6 +13,9 @@ const routes = [
   { path: '/blog', name: 'blog', component: BlogView },
   { path: '/shop', name: 'shop', component: ShopView },
   { path: '/produk', name: 'produk', component: Produk },
+  { path: '/tugas', name: 'tugas', component: Tugas },
+
+  
 
 
 ]

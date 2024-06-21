@@ -1,7 +1,9 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink, RouterView } from 'vue-router'
-import Footer from './components/Footer.vue';
+import { RouterLink, RouterView } from 'vue-router';
+
+
+
 
 const slide = ref(1);
 const autoplay = ref(true);
@@ -10,27 +12,31 @@ const lorem = 'Desain-desain ini adalah karya para desainer yang kami temukan di
 
 
 
+
 </script>
 
-
 <template>
-  <section class="navbar">
-  <nav class="navbar">
-    <RouterLink to="/" class="nav-link">Home</RouterLink>
-    <RouterLink to="/about" class="nav-link">About</RouterLink>
-    <RouterLink to="/blog" class="nav-link">Blog</RouterLink>
-    <RouterLink to="/shop" class="nav-link">Shop</RouterLink>
-    <RouterLink to="/produk" class="nav-link">Produk</RouterLink>
-    <label style="padding-left: 15px; padding-top: 5px;">
-    <span style="padding-right: 10px;">Search:</span>  <input type="search" name="" id="">
-</label>
-<i class="material-icons">shopping_cart</i> <!-- Shopping cart icon -->
-<i class="material-icons">account_circle</i>
-    
-  </nav>
-</section>
+<span style="font-family:monospace; font-size: 10px;"><i>*Note: Klik Tugas 2 Kali</i></span>
 
-<section class="caraousel">
+  <section class="navbar">
+    <nav class="navbar">
+      
+      <RouterLink to="/" class="nav-link">Home</RouterLink>
+      <RouterLink to="/about" class="nav-link">About</RouterLink>
+      <RouterLink to="/blog" class="nav-link">Blog</RouterLink>
+      <RouterLink to="/shop" class="nav-link">Shop</RouterLink>
+      <RouterLink to="/produk" class="nav-link" @click="scrollToProduk">Produk</RouterLink>
+      <RouterLink to="/tugas" class="nav-link" @click="scrollToTugas">Tugas</RouterLink>
+      
+      <label style="padding-left: 15px; padding-top: 5px;">
+        <span style="padding-right: 10px;">Search:</span>  <input type="search" name="" id="">
+      </label>
+      <i class="material-icons">shopping_cart</i> <!-- Shopping cart icon -->
+      <i class="material-icons">account_circle</i>
+    </nav>
+    
+  </section>
+<section class="caraousel" >
   <div class="carousel-container q-pa-md">
     <q-carousel
       animated
@@ -193,7 +199,7 @@ Di sini, desainer memberikan kesan visual yang kuat dengan ukuran desain artisti
   </section>
 
   
-  <router-view></router-view>
+  
   <main>
     <RouterView />
   </main>
@@ -210,8 +216,40 @@ Di sini, desainer memberikan kesan visual yang kuat dengan ukuran desain artisti
   
 </style>
 
-<style scoped>
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 350px
+</style>
 
+<style scoped>
+button.kuliah {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.kuliah:hover {
+  background-color: #0056b3;
+}
+
+/* Gaya untuk daftar item Kuliah */
+.kuliah-items {
+  margin-top: 10px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.kuliah-items li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
 button.buy{
   margin-left: 120px;
   padding: 5px;
